@@ -1,4 +1,4 @@
-namespace Tyuiu.LazutinVS.Sprint6.Task0.V5
+namespace Tyuiu.LazutinVS.Sprint6.Task1.V8
 {
     internal static class Program
     {
@@ -12,6 +12,8 @@ namespace Tyuiu.LazutinVS.Sprint6.Task0.V5
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             Application.Run(new FormMain());
+
         }
+
     }
 }

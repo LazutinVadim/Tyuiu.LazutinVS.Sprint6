@@ -2,9 +2,9 @@ using Tyuiu.LazutinVS.Sprint6.Task0.V5.Lib;
 
 namespace Tyuiu.LazutinVS.Sprint6.Task0.V5
 {
-    public partial class Form1 : Form
+    public partial class FormMain : Form
     {
-        public Form1()
+        public FormMain()
         {
             InitializeComponent();
         }

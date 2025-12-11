@@ -1,6 +1,6 @@
 ﻿namespace Tyuiu.LazutinVS.Sprint6.Task0.V5
 {
-    partial class Form1
+    partial class FormMain
     {
         /// <summary>
         ///  Required designer variable.
