@@ -30,16 +30,17 @@
         {
             button_LVS = new Button();
             dataGridViewOutput_LVS = new DataGridView();
-            textResult_LVS = new TextBox();
+            buttonnNotify_LVS = new Button();
+            textBox_LVS = new TextBox();
             ((System.ComponentModel.ISupportInitialize)dataGridViewOutput_LVS).BeginInit();
             SuspendLayout();
             // 
             // button_LVS
             // 
             button_LVS.BackColor = Color.Lime;
-            button_LVS.Location = new Point(633, 352);
+            button_LVS.Location = new Point(720, 477);
             button_LVS.Name = "button_LVS";
-            button_LVS.Size = new Size(279, 77);
+            button_LVS.Size = new Size(221, 54);
             button_LVS.TabIndex = 0;
             button_LVS.Text = "Start";
             button_LVS.UseVisualStyleBackColor = false;
@@ -48,28 +49,40 @@
             // dataGridViewOutput_LVS
             // 
             dataGridViewOutput_LVS.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewOutput_LVS.Location = new Point(12, 27);
+            dataGridViewOutput_LVS.Location = new Point(321, 69);
             dataGridViewOutput_LVS.Name = "dataGridViewOutput_LVS";
             dataGridViewOutput_LVS.RowHeadersWidth = 62;
-            dataGridViewOutput_LVS.Size = new Size(545, 247);
+            dataGridViewOutput_LVS.Size = new Size(311, 362);
             dataGridViewOutput_LVS.TabIndex = 5;
             dataGridViewOutput_LVS.CellContentClick += dataGridViewOutput_LVS_CellContentClick;
             // 
-            // textResult_LVS
+            // buttonnNotify_LVS
             // 
-            textResult_LVS.Location = new Point(104, 375);
-            textResult_LVS.Name = "textResult_LVS";
-            textResult_LVS.Size = new Size(279, 31);
-            textResult_LVS.TabIndex = 1;
-            textResult_LVS.TextChanged += textResult_LVS_TextChanged;
+            buttonnNotify_LVS.BackColor = Color.FromArgb(224, 224, 224);
+            buttonnNotify_LVS.Location = new Point(645, 477);
+            buttonnNotify_LVS.Name = "buttonnNotify_LVS";
+            buttonnNotify_LVS.Size = new Size(69, 54);
+            buttonnNotify_LVS.TabIndex = 6;
+            buttonnNotify_LVS.Text = "!!!";
+            buttonnNotify_LVS.UseVisualStyleBackColor = false;
+            buttonnNotify_LVS.Click += buttonnNotify_LVS_Click;
+            // 
+            // textBox_LVS
+            // 
+            textBox_LVS.Location = new Point(12, 51);
+            textBox_LVS.Multiline = true;
+            textBox_LVS.Name = "textBox_LVS";
+            textBox_LVS.Size = new Size(229, 310);
+            textBox_LVS.TabIndex = 7;
             // 
             // FormMain
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(953, 543);
+            Controls.Add(textBox_LVS);
+            Controls.Add(buttonnNotify_LVS);
             Controls.Add(dataGridViewOutput_LVS);
-            Controls.Add(textResult_LVS);
             Controls.Add(button_LVS);
             Name = "FormMain";
             Text = "Form1";
@@ -83,6 +96,7 @@
 
         private Button button_LVS;
         private DataGridView dataGridViewOutput_LVS;
-        private TextBox textResult_LVS;
+        private Button buttonnNotify_LVS;
+        private TextBox textBox_LVS;
     }
 }

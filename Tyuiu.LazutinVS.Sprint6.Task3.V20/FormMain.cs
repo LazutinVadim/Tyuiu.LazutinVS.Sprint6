@@ -66,5 +66,10 @@ namespace Tyuiu.LazutinVS.Sprint6.Task3.V20
         {
 
         }
+
+        private void buttonnNotify_LVS_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Выполнил", "Ошибка", MessageBoxButtons.OK);
+        }
     }
 }
