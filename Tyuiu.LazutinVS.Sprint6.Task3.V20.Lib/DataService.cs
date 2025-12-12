@@ -2,7 +2,7 @@
 
 namespace Tyuiu.LazutinVS.Sprint6.Task3.V20.Lib
 {
-    public class DataService : ISprint6Task3V3
+    public class DataService : ISprint6Task3V20
     {
         public int[,] Calculate(int[,] matrix)
         {
