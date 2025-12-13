@@ -14,23 +14,23 @@ namespace Tyuiu.LazutinVS.Sprint6.Task7.V4
         static string openFilePath;
         DataService ds = new DataService();
 
-        public static int[,] LoadFromFileData(string filePath)
+        public static int[,] LoadFromFileData(string filePath) // Метод загрузки матрицы из файла
         {
-            string fileData = File.ReadAllText(filePath);
-            fileData = fileData.Replace('\n', '\r');
-            string[] lines = fileData.Split(new char[] { '\r' }, StringSplitOptions.RemoveEmptyEntries);
+            string fileData = File.ReadAllText(filePath); // Чтение с файла в переменную
+            fileData = fileData.Replace('\n', '\r'); // Унификация строк (замена одиночных символов)
+            string[] lines = fileData.Split(new char[] { '\r' }, StringSplitOptions.RemoveEmptyEntries); // Разбиение текст на массив строк по \r, удаляя пустые строки
 
-            rows = lines.Length;
-            columns = lines[0].Split(';').Length;
+            rows = lines.Length; // Запись рядов матрицы
+            columns = lines[0].Split(';').Length; // Запись колонок
 
-            int[,] arrayValues = new int[rows, columns];
+            int[,] arrayValues = new int[rows, columns]; // двумерный массив rows * columns
 
             for (int r = 0; r < rows; r++)
             {
-                string[] line_r = lines[r].Split(';');
+                string[] line_r = lines[r].Split(';'); // разбиение строки по ;
                 for (int c = 0; c < columns; c++)
                 {
-                    arrayValues[r, c] = Convert.ToInt32(line_r[c]);
+                    arrayValues[r, c] = Convert.ToInt32(line_r[c]); // Запись в массив
                 }
             }
             return arrayValues;
@@ -38,17 +38,15 @@ namespace Tyuiu.LazutinVS.Sprint6.Task7.V4
 
         private void buttonOpen_LVS_Click(object sender, EventArgs e)
         {
-            openFileDialogTask_LVS.ShowDialog();
-            openFilePath = openFileDialogTask_LVS.FileName;
+            openFileDialogTask_LVS.ShowDialog(); // Диалог выбора файла
+            openFilePath = openFileDialogTask_LVS.FileName; // Путь к файлу
 
-            int[,] arrayValues = new int[rows, columns];
+            int[,] arrayValues = new int[rows, columns]; // двумерный массив rows * columns
 
-            arrayValues = LoadFromFileData(openFilePath);
+            arrayValues = LoadFromFileData(openFilePath); // Загружаем данные
 
             Input_LVS.ColumnCount = columns;
             Input_LVS.RowCount = rows;
-            Input_LVS.RowCount = rows;
-            Input_LVS.ColumnCount = columns;
 
             for (int i = 0; i < columns; i++)
             {
